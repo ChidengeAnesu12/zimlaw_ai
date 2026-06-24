@@ -1,0 +1,55 @@
+name: zimlaw_ai
+description: Legal Intelligence Platform for Zimbabwe — AI legal assistant, legal research, land & property intelligence, document generation, and lawyer marketplace.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # UI / Design
+  google_fonts: ^6.2.1       # Inter typography
+  flutter_svg: ^2.0.10+1     # illustrations/icons
+  shimmer: ^3.0.0            # loading skeletons
+  lottie: ^3.1.2             # premium onboarding animations
+
+  # Localization (English / Shona / Ndebele)
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+
+  # Local persistence (theme, language, offline placeholders)
+  shared_preferences: ^2.2.3
+
+  # Document handling (mock now, real-ready later)
+  file_picker: ^8.0.6
+  image_picker: ^1.1.2
+  pdf: ^3.11.1
+  printing: ^5.13.1
+  path_provider: ^2.1.4
+
+  # Utilities
+  equatable: ^2.0.5
+  uuid: ^4.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/illustrations/
+    - assets/lottie/
