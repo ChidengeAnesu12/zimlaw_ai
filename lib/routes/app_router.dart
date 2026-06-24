@@ -1,36 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'route_names.dart';
+import '../features/onboarding/presentation/screens/splash_screen.dart';
+import '../features/onboarding/presentation/screens/onboarding_screen.dart';
 
-/// TEMPORARY placeholder screen.
-/// Exists only to prove the app boots, theme applies, and routing works.
-/// Will be replaced by the real onboarding screen in the next step.
-class _BootCheckScreen extends StatelessWidget {
-  const _BootCheckScreen();
+/// TEMPORARY placeholder for Login.
+/// Replaced with the real screen in Step 8 (Authentication).
+class _LoginPlaceholderScreen extends StatelessWidget {
+  const _LoginPlaceholderScreen();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.balance,
-              size: 64,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            const SizedBox(height: 16),
-            Text(
-              'ZimLaw AI',
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Foundation boot check ✅',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ],
+        child: Text(
+          'Login screen — coming in Step 8',
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ),
     );
@@ -46,7 +31,15 @@ class AppRouter {
     routes: [
       GoRoute(
         path: RouteNames.splash,
-        builder: (context, state) => const _BootCheckScreen(),
+        builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: RouteNames.onboarding,
+        builder: (context, state) => const OnboardingScreen(),
+      ),
+      GoRoute(
+        path: RouteNames.login,
+        builder: (context, state) => const _LoginPlaceholderScreen(),
       ),
     ],
   );
